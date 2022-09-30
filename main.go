@@ -59,8 +59,8 @@ func main() {
 	}
 	for _, val := range data.Items {
 		coordinates := []interface{}{}
-		coordinates = append(coordinates, val.Position.Lat)
 		coordinates = append(coordinates, val.Position.Lng)
+		coordinates = append(coordinates, val.Position.Lat)
 
 		geojsonFeature := map[string]interface{}{
 			"type": "Feature",
