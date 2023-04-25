@@ -39,8 +39,8 @@ func GetData(url, locate, radius, keyword, limit, key string) (model.Items, erro
 func GenerateGeojson() {
 	url := model.URL
 	locate := "21.01035,105.80826"
-	radius := "1000000"
-	keyword := "coffee"
+	radius := "10000000"
+	keyword := "gas"
 	limit := "100"
 	key := model.Key
 
@@ -77,9 +77,5 @@ func GenerateGeojson() {
 	dataWrite, _ := json.Marshal(result)
 	WriteFile(dataWrite)
 	log.Println("Done.")
-
-}
-
-func main() {
 
 }
